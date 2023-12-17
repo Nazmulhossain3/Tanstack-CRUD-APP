@@ -11,6 +11,7 @@ import "./index.css";
 import Home from './Pages/Home/Home';
 import EditPost from './Pages/Home/EditPost.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ShowSingleUser from './Pages/Home/ShowSingleUser.jsx';
 
 const queryClient = new QueryClient()
 
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
     {
       path : "/post/:id/edit",
       element : <EditPost></EditPost>
-    }
+    },
+   {
+    path : '/singleUser/:id',
+    element : <ShowSingleUser></ShowSingleUser>
+   }
     ]
   },
 ])
