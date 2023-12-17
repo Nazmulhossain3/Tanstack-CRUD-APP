@@ -20,3 +20,23 @@ export async function getSingleUser(id){
 
     return res.json()
 }
+
+export async function deleteUser(id){
+    const res = await fetch(`http://localhost:3000/user-route/deleteUser/${id}`,{
+        method : "DELETE"
+    })
+
+    return res.json()
+}
+
+export async function UpdateSingleUser(update){
+    const res = await fetch(`http://localhost:3000/user-route/updateUser/${update.id}`,{
+        method : 'PUT',
+        headers : {
+            "Content-type" : "application/json"
+        },
+        body : JSON.stringify(update)
+    })
+
+    return res.json()
+}

@@ -34,7 +34,7 @@ const PostForm = () => {
     createUserMutation.mutate({
       ...user
     })
-
+    form.reset()
 
   };
 

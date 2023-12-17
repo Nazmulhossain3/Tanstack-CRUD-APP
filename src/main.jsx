@@ -12,6 +12,7 @@ import Home from './Pages/Home/Home';
 import EditPost from './Pages/Home/EditPost.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ShowSingleUser from './Pages/Home/ShowSingleUser.jsx';
+import UpdateUser from './Pages/Home/UpdateUser.jsx';
 
 const queryClient = new QueryClient()
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
    {
     path : '/singleUser/:id',
     element : <ShowSingleUser></ShowSingleUser>
+   },
+   {
+    path : '/updateUser/:id',
+    element : <UpdateUser></UpdateUser>
    }
     ]
   },

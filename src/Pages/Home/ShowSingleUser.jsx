@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { getSingleUser } from "../../Componet/User/user";
-// import { Bars } from "react-loader-spinner";
+import { Bars } from "react-loader-spinner";
 
 const ShowSingleUser = () => {
 const {id} = useParams()
@@ -10,17 +10,17 @@ const {isLoading,data:user} = useQuery({
     queryFn : ()=> getSingleUser(id)
 })
 
-// if(isLoading){
-//     return <Bars
-//     height="80"
-//     width="80"
-//     color="#4fa94d"
-//     ariaLabel="bars-loading"
-//     wrapperStyle={{}}
-//     wrapperClass=""
-//     visible={true}
-//   />
-// }
+if(isLoading){
+    return <Bars
+    height="80"
+    width="80"
+    color="#4fa94d"
+    ariaLabel="bars-loading"
+    wrapperStyle={{}}
+    wrapperClass=""
+    visible={true}
+  />
+}
 
     return (
         <div>
